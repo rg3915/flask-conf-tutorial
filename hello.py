@@ -10,3 +10,8 @@ def hello():
 @app.route('/rota1')
 def view_da_rota1():
     return 'Nova rota!'
+
+
+@app.route('/rota2/<nome>')
+def view_da_rota2(nome):
+    return 'Bem vindo, ' + nome + '! Essa é a view da /rota2!'
