@@ -13,5 +13,10 @@ def index():
     return render_template('index.html', events=events)
 
 
+@bp.route('/<event_id>/', methods=['GET', 'POST'])
+def event(event_id):
+    return 'Hello'
+
+
 def configure(app):
     app.register_blueprint(bp)
