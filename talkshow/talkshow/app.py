@@ -4,6 +4,7 @@ from talkshow.ext import cli
 from talkshow.ext import db
 from talkshow.ext import bootstrap
 from talkshow.ext import admin
+from talkshow.ext import login
 from talkshow.ext import apidocs
 from talkshow.blueprints import webui
 from talkshow.blueprints import restapi
@@ -17,6 +18,7 @@ def create_app():
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     # extensions
     db.configure(app)  # importante: o db deve vir primeiro.
+    login.configure(app)
     cli.configure(app)
     bootstrap.configure(app)
     admin.configure(app)

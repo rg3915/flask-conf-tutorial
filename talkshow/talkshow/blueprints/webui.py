@@ -8,10 +8,13 @@ from flask import flash  # suporte a mensagens de alerta
 from talkshow.ext.admin import ModelView  # base Admin model view
 from flask_admin.actions import action  # suporte a actions
 
+from flask_simplelogin import login_required
+
 bp = Blueprint("webui", __name__)
 
 
 @bp.route('/')
+@login_required
 def index():
     """View to list all registered events"""
     events = app.db['events'].find()
