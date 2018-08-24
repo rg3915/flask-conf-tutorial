@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import jsonify
 from flask import render_template
 app = Flask(__name__)
 
@@ -21,3 +22,8 @@ def view_da_rota2(nome):
 @app.route("/ola/<nome>")
 def view_com_template(nome):
     return render_template("index.html", nome=nome)
+
+
+@app.route("/api")
+def view_com_json():
+    return jsonify({"mensagem": "Bem vindo a sua primeira API REST!"})
