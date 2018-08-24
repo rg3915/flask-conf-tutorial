@@ -3,6 +3,7 @@ from flask import Flask
 from talkshow.ext import cli
 from talkshow.ext import db
 from talkshow.ext import bootstrap
+from talkshow.blueprints import webui
 
 
 def create_app():
@@ -15,4 +16,5 @@ def create_app():
     cli.configure(app)
     bootstrap.configure(app)
     # blueprints
+    webui.configure(app)
     return app
