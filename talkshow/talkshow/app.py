@@ -12,6 +12,7 @@ def create_app():
     app = Flask(__name__)
     # config
     app.config['SECRET_KEY'] = config('SECRET_KEY')
+    app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     # extensions
     db.configure(app)  # importante: o db deve vir primeiro.
     cli.configure(app)
