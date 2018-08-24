@@ -8,4 +8,6 @@ def configure(app):
     @click.option('--date', '-d', required=True)
     def addevent(name, date):
         ''' Creates a new event entry. '''
-        click.echo(f'Name: {name} Date: {date}')
+        event = app.db['events'].insert_one({'name': name, 'date': date})
+        # click.echo(f'Name: {name} Date: {date}')
+        click.echo(f"{event.inserted_id} cadastrado com sucesso!")

@@ -54,3 +54,26 @@ $ flask shell
 flask addevent -n "FlaskConf" -d 2018-08-24
 ```
 
+### DB
+
+```
+$ flask shell
+>>> app.db
+>>> app.db['events']
+>>> app.db['events'].insert({'name': 'FlaskConf', 'date': '2018-08-24'})
+>>> app.db['events'].find()  # É um generator
+>>> app.db['events'].find_one({'name': 'FlaskConf'})
+```
+
+
+
+#### Blueprint
+
+```
+blueprints/webui.py
+```
+
+```
+pip install flask-bootstrap flask-wtf
+```
+
