@@ -5,6 +5,7 @@ from talkshow.ext import db
 from talkshow.ext import bootstrap
 from talkshow.ext import admin
 from talkshow.blueprints import webui
+from talkshow.blueprints import restapi
 
 
 def create_app():
@@ -20,4 +21,5 @@ def create_app():
     admin.configure(app)
     # blueprints
     webui.configure(app)
+    restapi.configure(app)
     return app
