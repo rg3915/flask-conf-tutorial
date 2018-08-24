@@ -84,3 +84,14 @@ pip install flask-bootstrap flask-wtf
 http --form POST localhost:5000/api/v1/event/ name="JSConf"
 ```
 
+URL
+
+```
+http://localhost:5000/api/v1/event/
+```
+
+### Docs
+
+```
+http://localhost:5000/apidocs/
+```
