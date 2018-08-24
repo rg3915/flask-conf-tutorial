@@ -95,3 +95,13 @@ http://localhost:5000/api/v1/event/
 ```
 http://localhost:5000/apidocs/
 ```
+
+
+### Login
+
+
+#### Criando um usuário
+
+```
+flask adduser -u "admin" -p 1234
+```

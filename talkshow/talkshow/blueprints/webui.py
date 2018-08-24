@@ -14,7 +14,6 @@ bp = Blueprint("webui", __name__)
 
 
 @bp.route('/')
-@login_required
 def index():
     """View to list all registered events"""
     events = app.db['events'].find()
